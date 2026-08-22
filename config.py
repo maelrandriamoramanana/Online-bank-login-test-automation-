@@ -16,5 +16,5 @@ class Config:
     LOCKED_USER = os.getenv("LOCKED_USER", "locked_user")
     LOCKED_PASS = os.getenv("LOCKED_PWD", "bank_sauce")
 
-    FAILED_USER = os.getenv("FAILED", "cocoman")
-    FAILED_PWD = os.getenv("FAILED_PWD", "cocobeloha")
+    FAILED_USER = os.getenv("FAILED", "Inexistant_user")
+    FAILED_PWD = os.getenv("FAILED_PWD", "Impossible")
