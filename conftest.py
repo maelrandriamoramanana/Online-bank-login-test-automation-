@@ -1,14 +1,14 @@
 import pytest
-from playwright.sync_api import sync_playwright
 import allure
+from playwright.sync_api import sync_playwright
 from config import Config
 
-@pytest.fixture(scope="function")
+@pytest.fixture(scope = "function")
 def page():
 
     with sync_playwright() as p:
         browser_type = getattr(p, Config.BROWSER)
-        browser = browser_type.launch(headless= Config.HEADLESS, slow_mo = 1000)
+        browser = browser_type.launch(headless = Config.HEADLESS, slow_mo = 1000)
 
         context = browser.new_context()
         page = context.new_page()
