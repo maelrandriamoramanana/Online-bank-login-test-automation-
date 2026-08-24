@@ -15,6 +15,7 @@ Automated testing framework for a online banking login page, built with **Python
 ---
 
 ## Project Structure
+```text
 Bank-login-Page-test-automation/
 │
 ├── pages/
@@ -28,4 +29,4 @@ Bank-login-Page-test-automation/
 ├── .env                    # Credentials & URLs (ignored by git)
 ├── .gitignore              # Made to hide the .env file in git
 ├── conftest.py             # Fixtures, browser setup & Allure hooks
-└── requirements.txt        # Project dependencies to install before launching the program
+└── requirements.txt        # Project dependencies in order to launch the program correctly
