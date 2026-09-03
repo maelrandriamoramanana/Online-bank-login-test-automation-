@@ -1,11 +1,8 @@
-from playwright.sync_api import Page
-from dotenv import load_dotenv
+from playwright.sync_api import Page, Locator, TimeoutError as PlaywrightTimeoutError
 from config import Config
 
-load_dotenv()
-
 class BasePage:
-    def __init__(self, page: Page):
+    def __init__(self, page : Page):
         self.page = page
 
     def navigate(self, endpoint=""):
@@ -14,3 +11,10 @@ class BasePage:
 
     def get_current_url(self):
         return self.page.url
+
+    def is_element_visible(self, locator: Locator, timeout = 5000) -> bool:
+        try:
+            locator.wait_for(state="visible", timeout = timeout)
+            return True
+        except PlaywrightTimeoutError:
+            return False

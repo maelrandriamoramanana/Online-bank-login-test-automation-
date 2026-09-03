@@ -9,12 +9,13 @@ class Config:
 
     BROWSER = os.getenv("BROWSER", "chromium")
     HEADLESS = os.getenv("HEADLESS", "False").lower() == "true"
+    SLOW_MO = int(os.getenv("SLOW_MO", 1000))
 
-    STANDARD_USER = os.getenv("STANDARD_USER", "standard_user")
-    STANDARD_PASS = os.getenv("STANDARD_PWD", "bank_sauce")
+    STANDARD_USER = os.getenv("STANDARD_USER")
+    STANDARD_PASS = os.getenv("STANDARD_PWD")
 
-    LOCKED_USER = os.getenv("LOCKED_USER", "locked_user")
-    LOCKED_PASS = os.getenv("LOCKED_PWD", "bank_sauce")
+    LOCKED_USER = os.getenv("LOCKED_USER")
+    LOCKED_PASS = os.getenv("LOCKED_PWD")
 
-    FAILED_USER = os.getenv("FAILED", "Inexistant_user")
-    FAILED_PWD = os.getenv("FAILED_PWD", "Impossible")
+    FAILED_USER = os.getenv("FAILED")
+    FAILED_PWD = os.getenv("FAILED_PWD")
