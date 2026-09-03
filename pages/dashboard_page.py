@@ -1,7 +1,7 @@
 from playwright.sync_api import Page
-from config import Config
+from pages.base_page import BasePage
 
-class DashboardPage:
+class DashboardPage(BasePage):
     def __init__(self, page:  Page):
         super().__init__(page)
         self.welcome_message = page.get_by_text("welcome back")

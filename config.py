@@ -12,10 +12,10 @@ class Config:
     SLOW_MO = int(os.getenv("SLOW_MO", 1000))
 
     STANDARD_USER = os.getenv("STANDARD_USER")
-    STANDARD_PASS = os.getenv("STANDARD_PWD")
+    STANDARD_PASS = os.getenv("STANDARD_PASS")
 
     LOCKED_USER = os.getenv("LOCKED_USER")
-    LOCKED_PASS = os.getenv("LOCKED_PWD")
+    LOCKED_PASS = os.getenv("LOCKED_PASS")
 
-    FAILED_USER = os.getenv("FAILED")
-    FAILED_PWD = os.getenv("FAILED_PWD")
+    FAILED_USER = os.getenv("FAILED_USER")
+    FAILED_PASS = os.getenv("FAILED_PASS")
